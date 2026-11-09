@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Breakpoints de la maquette : 768 / 1024 / 1240 */
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-nav: 1240px;
+
+  --color-forest: #1c2e1e; /* vert profond : boutons, texte fort */
+  --color-pine: #3d5a3a;
+  --color-moss: #4d6d47; /* sur-titres, accents */
+  --color-fern: #6c8768;
+  --color-sage: #738273; /* légendes */
+  --color-body: #5a635a; /* texte courant */
+  --color-muted: #8c978c;
+  --color-faint: #a3ada3;
+  --color-pale: #a3b79f;
+  --color-lichen: #c9d2c7;
+  --color-frost: #d3dcd0;
+  --color-line: #e3e8e1;
+  --color-line-soft: #eef1ec;
+  --color-ash: #eaece9;
+  --color-chip: #f1f3f1;
+  --color-hover: #f5f7f4;
+  --color-mist: #fafbf9;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+  }
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    background: #eaece9;
+    color: #1c2e1e;
+  }
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+  a:hover {
+    opacity: 0.6;
+  }
+  button {
+    font-family: inherit;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes drawPath {
+  to { stroke-dashoffset: 0; }
+}
+
+@utility animate-blink {
+  animation: blink 1s step-end infinite;
+}
+@utility text-pretty {
+  text-wrap: pretty;
+}
