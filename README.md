@@ -43,3 +43,21 @@ nombre de jours avant les Jeux se calcule tout seul.
 - Budget (28 000 € et sa répartition) : estimation à confirmer — `src/pages/Aider.tsx`.
 - Presse : titres des retombées, liens du kit média (`href: "#"`) et les 3 photos.
 - Points FIS et graphe : valeurs figées, mise à jour manuelle (`src/pages/Histoire.tsx`, `src/components/FisChart.tsx`).
+
+## Conformité (vérifiée le 10 novembre 2026)
+
+Déjà en place : page `#/mentions-legales` (éditeur, hébergeur, indépendance vis-à-vis du CIO / CNOSF / FIS,
+données personnelles, cookies), aucun cookie ni traceur (donc pas de bandeau nécessaire), police Inter hébergée
+avec le site, contrastes de couleurs conformes WCAG AA, lien « Aller au contenu », vidéos avec bouton pause,
+respect du réglage « réduire les animations », textes alternatifs sur les images et vidéos.
+
+Si un jour on ajoute Google Analytics, un pixel Meta, une vidéo YouTube ou un formulaire : il faudra un bandeau de
+consentement et mettre à jour la page mentions légales.
+
+À faire par Stan avant de diffuser le site :
+- Remplacer les contributions inventées du compteur par les vraies (sinon : affichage trompeur pour les donateurs).
+- Ne publier le nom d'un contributeur qu'avec son accord.
+- Avoir l'accord de sa mère pour les passages sur son adoption et ses origines (données sensibles).
+- Vérifier que l'adresse contact@stantounissont.com existe vraiment (ou la remplacer partout via `CONTACT_EMAIL`).
+- Si les animations Bamako / halo sont générées par IA, l'indiquer dans la légende (AI Act, art. 50).
+- Avant d'encaisser des dons ou des partenariats : voir un comptable (statut, association, fiscalité).

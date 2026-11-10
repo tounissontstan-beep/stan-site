@@ -24,6 +24,8 @@ export const COMPTEUR = {
 
   // ⚠️ EXEMPLES À REMPLACER par les vraies contributions avant la mise en ligne.
   // Les plus récentes en premier.
+  // RGPD : n'afficher le nom d'une personne qu'avec son accord (sinon nom: "Anonyme").
+  // Une entreprise peut être nommée, mais demandez-lui quand même.
   contributions: [
     { date: "6 nov. 2026", nom: "Boulangerie du Guil", type: "Partenariat", montant: 1500 },
     { date: "28 oct. 2026", nom: "Anonyme", type: "Don", montant: 50 },

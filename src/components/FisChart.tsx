@@ -21,13 +21,13 @@ export function FisChart() {
       </text>
       <line x1="60" y1="104" x2="740" y2="104" stroke="#EEF1EC" strokeWidth="1" />
       <line x1="60" y1="168" x2="740" y2="168" stroke="#E3E8E1" strokeWidth="1" strokeDasharray="2 4" />
-      <text x="740" y="162" fontSize="15" fill="#8C978C" textAnchor="end">
+      <text x="740" y="162" fontSize="15" fill="#6B776B" textAnchor="end">
         points de liste 159,98
       </text>
       <line x1="60" y1="200" x2="740" y2="200" stroke="#EEF1EC" strokeWidth="1" />
-      <text x="46" y="45" fontSize="15" fill="#A3ADA3" textAnchor="end">120</text>
-      <text x="46" y="109" fontSize="15" fill="#A3ADA3" textAnchor="end">140</text>
-      <text x="46" y="205" fontSize="15" fill="#A3ADA3" textAnchor="end">170</text>
+      <text x="46" y="45" fontSize="15" fill="#6B776B" textAnchor="end">120</text>
+      <text x="46" y="109" fontSize="15" fill="#6B776B" textAnchor="end">140</text>
+      <text x="46" y="205" fontSize="15" fill="#6B776B" textAnchor="end">170</text>
       <line x1="60" y1="215" x2="740" y2="215" stroke="#E3E8E1" strokeWidth="1" />
       <path
         d="M120 168 C 178 166, 216 152, 260 144 S 424 138, 540 118"
@@ -63,15 +63,15 @@ export function FisChart() {
           ) : (
             <>
               <circle cx={r.x} cy={r.y} r="4" fill="#ffffff" stroke="#C9D2C7" strokeWidth="2" />
-              <text x={r.x} y="184" fontSize="15" fontWeight="500" fill="#A3ADA3" textAnchor="middle">
+              <text x={r.x} y="184" fontSize="15" fontWeight="500" fill="#6B776B" textAnchor="middle">
                 DNF
               </text>
             </>
           )}
-          <text x={r.x} y="235" fontSize="15" fill="#8C978C" textAnchor="middle">
+          <text x={r.x} y="235" fontSize="15" fill="#6B776B" textAnchor="middle">
             {r.date}
           </text>
-          <text x={r.x} y="252" fontSize="14" fill="#A3ADA3" textAnchor="middle">
+          <text x={r.x} y="252" fontSize="14" fill="#6B776B" textAnchor="middle">
             {r.lieu}
           </text>
         </g>

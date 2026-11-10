@@ -1,3 +1,4 @@
+import { Video } from "../components/Video";
 import { FisChart } from "../components/FisChart";
 import { Parcours } from "../components/Parcours";
 import { CtaBand, Eyebrow, H2, Inner, Kicker, Label, Lead, PageH1, PageHead, Section } from "../components/ui";
@@ -90,15 +91,7 @@ export function Histoire() {
           <div className="grid grid-cols-1 items-center justify-items-center gap-9 lg:grid-cols-[1fr_auto_1fr] lg:justify-items-stretch lg:gap-[72px]">
             <HaloCol items={HALO_LEFT} className="order-2 text-left lg:order-none lg:text-right" />
             <div className="relative order-1 h-[280px] w-[280px] flex-none overflow-hidden bg-transparent md:h-[340px] md:w-[340px] lg:order-none lg:h-[440px] lg:w-[440px]">
-              <video
-                src="media/halo.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-                className="block h-full w-full object-contain"
-              />
+              <Video src="media/halo.mp4" className="block h-full w-full object-contain" label="Animation abstraite : un cercle de couleurs" />
             </div>
             <HaloCol items={HALO_RIGHT} className="order-3 lg:order-none" />
           </div>
@@ -127,7 +120,7 @@ export function Histoire() {
                 <div className="mb-3 flex items-center gap-[9px]">
                   <span className="h-[7px] w-[7px] flex-none rounded-full bg-moss" />
                   <span className="text-[12px] font-semibold uppercase tracking-[0.14em] text-moss">
-                    Compte FIS relié
+                    Données FIS publiques
                   </span>
                 </div>
                 <h3 className="m-0 mb-[10px] text-[32px] font-normal leading-[1.15] tracking-[-0.025em] text-black md:text-[34px]">

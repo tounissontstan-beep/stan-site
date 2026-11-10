@@ -1,3 +1,4 @@
+import { Video } from "../components/Video";
 import { motion } from "motion/react";
 import { compteurStats } from "../data/derive";
 import { Arrow, Eyebrow, H2, PrimaryLink, Stat, Unit, UnderlineLink } from "../components/ui";
@@ -22,7 +23,7 @@ export function Home({ typed }: { typed: { displayed: string; done: boolean } })
       </div>
 
       <div className="relative z-[1] -order-1 flex w-full flex-col bg-white pb-8 lg:order-none lg:min-h-screen lg:bg-transparent lg:pb-0">
-        <main className="mx-auto box-border flex w-full max-w-[1280px] flex-1 flex-col justify-center px-6 pt-[120px] pb-16 lg:pt-[136px]">
+        <div className="mx-auto box-border flex w-full max-w-[1280px] flex-1 flex-col justify-center px-6 pt-[120px] pb-16 lg:pt-[136px]">
           <motion.div {...dropIn(0)}>
             <h1 className="m-0 mb-8 w-full select-none whitespace-pre-wrap text-[46px] font-normal leading-[1.08] tracking-[-0.025em] text-black md:text-[60px] lg:text-[76px]">
               {typed.displayed}
@@ -43,7 +44,7 @@ export function Home({ typed }: { typed: { displayed: string; done: boolean } })
               Ce qui se cache derrière cet objectif
             </UnderlineLink>
           </motion.div>
-        </main>
+        </div>
       </div>
 
       {/* L'aventure + vidéo Bamako */}
@@ -69,15 +70,7 @@ export function Home({ typed }: { typed: { displayed: string; done: boolean } })
           </div>
           <figure className="m-0 flex flex-col gap-[14px]">
             <div className="relative aspect-video w-full overflow-hidden rounded-3xl bg-ash">
-              <video
-                src="media/bamako.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-                className="block h-full w-full object-cover"
-              />
+              <Video src="media/bamako.mp4" className="block h-full w-full object-cover" label="Animation : arrivée à ski sur Bamako, drapeau malien cousu sur la veste" />
             </div>
             <figcaption className="m-0 text-[14px] text-sage">
               Animation — arrivée sur Bamako, drapeau malien cousu sur la veste.

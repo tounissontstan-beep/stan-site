@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-export type Page = "home" | "histoire" | "aider" | "presse" | "compteur";
-const PAGES: Page[] = ["histoire", "aider", "presse", "compteur"];
+export type Page = "home" | "histoire" | "aider" | "presse" | "compteur" | "mentions-legales";
+const PAGES: Page[] = ["histoire", "aider", "presse", "compteur", "mentions-legales"];
 
 function readPage(): Page {
   const h = (window.location.hash || "").replace(/^#\/?/, "").split("?")[0];
@@ -23,10 +23,15 @@ export function useHashPage(onChange?: () => void) {
   return page;
 }
 
+const prefersReducedMotion = () =>
+  typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+
 export function useTypewriter(text: string, speed = 38, startDelay = 600) {
-  const [displayed, setDisplayed] = useState("");
-  const [done, setDone] = useState(false);
+  const reduce = prefersReducedMotion();
+  const [displayed, setDisplayed] = useState(reduce ? text : "");
+  const [done, setDone] = useState(reduce);
   useEffect(() => {
+    if (reduce) return;
     let iv: ReturnType<typeof setInterval>;
     const t = setTimeout(() => {
       let i = 0;
@@ -45,6 +50,6 @@ export function useTypewriter(text: string, speed = 38, startDelay = 600) {
       clearTimeout(t);
       clearInterval(iv);
     };
-  }, [text, speed, startDelay]);
+  }, [text, speed, startDelay, reduce]);
   return { displayed, done };
 }

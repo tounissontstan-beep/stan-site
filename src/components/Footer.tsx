@@ -7,6 +7,12 @@ export function Footer() {
         <div className="flex flex-col gap-[6px]">
           <p className="m-0 text-[17px] font-medium tracking-[-0.01em] text-black">Stan Tounissont &#10033;</p>
           <p className="m-0 text-[14px] text-muted">Skieur alpin &middot; Code FIS 6192025 &middot; Club Sports de Risoul</p>
+          <p className="m-0 max-w-[420px] text-[13px] leading-[1.5] text-muted">
+            Site personnel, sans lien avec le CIO, le CNOSF ou la FIS.{" "}
+            <a href="#/mentions-legales" className="!text-muted underline underline-offset-[3px]">
+              Mentions légales &amp; confidentialité
+            </a>
+          </p>
         </div>
         <nav className="flex flex-wrap gap-x-7 gap-y-3 text-[15px] [&_a]:!text-forest">
           <a href="#/">Accueil</a>
