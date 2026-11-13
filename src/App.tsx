@@ -7,6 +7,7 @@ import { Histoire } from "./pages/Histoire";
 import { Aider } from "./pages/Aider";
 import { Presse } from "./pages/Presse";
 import { Compteur } from "./pages/Compteur";
+import { Don } from "./pages/Don";
 import { MentionsLegales } from "./pages/MentionsLegales";
 
 const HEADLINE = "Je vise les JO 2030.\nJ'ai besoin de vous.";
@@ -38,6 +39,7 @@ export default function App() {
         {page === "presse" && <Presse />}
         {page === "compteur" && <Compteur />}
         {page === "mentions-legales" && <MentionsLegales />}
+        {page === "don" && <Don />}
       </main>
       <Footer />
     </div>

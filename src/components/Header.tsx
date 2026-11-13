@@ -7,6 +7,7 @@ const NAV: { href: string; label: string; page: Page }[] = [
   { href: "#/histoire", label: "Derrière l'objectif", page: "histoire" },
   { href: "#/aider", label: "Comment m'aider", page: "aider" },
   { href: "#/compteur", label: "Le compteur", page: "compteur" },
+  { href: "#/don", label: "Faire un don", page: "don" },
 ];
 
 export function Header({

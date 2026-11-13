@@ -79,7 +79,7 @@ export function MentionsLegales() {
           </Bloc>
 
           <Bloc titre="Données personnelles">
-            <p>Ce site ne comporte ni formulaire, ni compte, ni paiement en ligne : les dons se font par virement bancaire, en dehors du site. Les seules données traitées sont :</p>
+            <p>Ce site ne comporte ni formulaire, ni compte, ni paiement en ligne : les dons se font par virement bancaire, depuis votre banque. Les seules données traitées sont :</p>
             <ul>
               <li>
                 <strong>Les journaux techniques de l'hébergeur</strong> (adresse IP, page consultée, date) : conservés

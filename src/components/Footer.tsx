@@ -19,6 +19,7 @@ export function Footer() {
           <a href="#/histoire">Derrière l'objectif</a>
           <a href="#/aider">Comment m'aider</a>
           <a href="#/compteur">Le compteur</a>
+          <a href="#/don">Faire un don</a>
           <a href="#/presse">Presse &amp; médias</a>
           <a href={`mailto:${CONTACT_EMAIL}`} className="underline underline-offset-[3px]">
             {CONTACT_EMAIL}

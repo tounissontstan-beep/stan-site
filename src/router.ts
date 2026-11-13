@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-export type Page = "home" | "histoire" | "aider" | "presse" | "compteur" | "mentions-legales";
-const PAGES: Page[] = ["histoire", "aider", "presse", "compteur", "mentions-legales"];
+export type Page = "home" | "histoire" | "aider" | "presse" | "compteur" | "mentions-legales" | "don";
+const PAGES: Page[] = ["histoire", "aider", "presse", "compteur", "mentions-legales", "don"];
 
 function readPage(): Page {
   const h = (window.location.hash || "").replace(/^#\/?/, "").split("?")[0];
