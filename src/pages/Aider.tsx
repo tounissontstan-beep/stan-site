@@ -1,6 +1,7 @@
 import { CONTACT_EMAIL, COMPTEUR } from "../data/compteur";
 import { compteurStats } from "../data/derive";
 import { ServicePills } from "../components/ServicePills";
+import { DonButton } from "../components/Don";
 import { Eyebrow, H2, Inner, Lead, PageH1, PageHead, PrimaryLink, Section, Stat, Unit, UnderlineLink } from "../components/ui";
 
 const mail = (subject: string) => `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}`;
@@ -25,7 +26,7 @@ const WAYS = [
     title: "Don libre",
     text: "À partir de 10 €. Un dossard FIS, une nuit avant une course, un aller-retour vers l'Italie : tout compte dans une saison.",
     cta: "Faire un don",
-    href: mail("Don"),
+    href: "don",
   },
 ];
 
@@ -74,6 +75,7 @@ export function Aider() {
           <PrimaryLink href={mail("Projet 2030 — échangeons")} size="md">
             Me contacter
           </PrimaryLink>
+          <DonButton variant="outline" />
           <UnderlineLink href={mail("Dossier partenaires")} className="whitespace-nowrap text-[16px]">
             Recevoir le dossier partenaires
           </UnderlineLink>
@@ -141,12 +143,18 @@ export function Aider() {
                 <span className="text-[13px] font-semibold tracking-[0.08em] text-faint">{w.n}</span>
                 <p className="m-0 text-[26px] font-normal leading-[1.15] tracking-[-0.025em] text-black">{w.title}</p>
                 <p className="m-0 text-[17px] leading-[1.65] text-body text-pretty">{w.text}</p>
-                <a
-                  href={w.href}
-                  className="mt-[6px] text-[15px] font-medium !text-forest underline underline-offset-[3px] transition-opacity duration-200"
-                >
-                  {w.cta}
-                </a>
+                {w.href === "don" ? (
+                  <DonButton variant="link" className="mt-[6px]">
+                    {w.cta}
+                  </DonButton>
+                ) : (
+                  <a
+                    href={w.href}
+                    className="mt-[6px] text-[15px] font-medium !text-forest underline underline-offset-[3px] transition-opacity duration-200"
+                  >
+                    {w.cta}
+                  </a>
+                )}
               </div>
             ))}
           </div>

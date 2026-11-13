@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { DonButton } from "./Don";
 
 const cx = (...c: (string | false | undefined)[]) => c.filter(Boolean).join(" ");
 
@@ -219,12 +220,15 @@ export function CtaBand({ eyebrow, children }: { eyebrow: string; children: Reac
             {children}
           </p>
         </div>
-        <a
-          href="#/aider"
-          className="inline-flex items-center gap-2 rounded-full bg-white px-[30px] py-4 text-[17px] font-medium tracking-[-0.01em] !text-forest transition-opacity duration-200 hover:!opacity-85"
-        >
-          Comment m'aider <Arrow />
-        </a>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="#/aider"
+            className="inline-flex items-center gap-2 rounded-full bg-white px-[30px] py-4 text-[17px] font-medium tracking-[-0.01em] !text-forest transition-opacity duration-200 hover:!opacity-85"
+          >
+            Comment m'aider <Arrow />
+          </a>
+          <DonButton variant="light" />
+        </div>
       </Container>
     </Section>
   );

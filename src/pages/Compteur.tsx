@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { COMPTEUR } from "../data/compteur";
 import { compteurStats, eur } from "../data/derive";
-import { CtaBand, Eyebrow, H2, Inner, Label, Lead, PageH1, PageHead, PrimaryLink, Section, Stat, Unit } from "../components/ui";
+import { DonButton } from "../components/Don";
+import { CtaBand, Eyebrow, H2, Inner, Label, Lead, PageH1, PageHead, Section, Stat, Unit } from "../components/ui";
 
 export function Compteur() {
   const s = compteurStats();
@@ -55,9 +56,9 @@ export function Compteur() {
           >
             {copied ? "Lien copié ✓" : "Copier le lien"}
           </button>
-          <PrimaryLink href="#/aider" size="md">
-            Comment m'aider
-          </PrimaryLink>
+          <DonButton>
+            Faire un don <span className="text-[15px] leading-none">&rarr;</span>
+          </DonButton>
         </div>
       </PageHead>
 
