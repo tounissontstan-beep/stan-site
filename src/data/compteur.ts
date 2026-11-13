@@ -40,3 +40,9 @@ export const OUVERTURE_JEUX = new Date(2030, 1, 1);
 
 export const CONTACT_EMAIL = "contact@stantounissont.com";
 
+// Coordonnées bancaires affichées dans la fenêtre « Faire un don ».
+export const DON = {
+  titulaire: "Stan Tounissont", // ⚠️ doit être exactement le nom du titulaire du compte
+  iban: "FR76 1680 7001 5738 3822 0521 118",
+  motif: "Don Stan 2030",
+};

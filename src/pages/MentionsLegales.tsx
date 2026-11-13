@@ -79,7 +79,7 @@ export function MentionsLegales() {
           </Bloc>
 
           <Bloc titre="Données personnelles">
-            <p>Ce site ne comporte ni formulaire, ni compte, ni paiement en ligne. Les seules données traitées sont :</p>
+            <p>Ce site ne comporte ni formulaire, ni compte, ni paiement en ligne : les dons se font par virement bancaire, depuis votre banque. Les seules données traitées sont :</p>
             <ul>
               <li>
                 <strong>Les journaux techniques de l'hébergeur</strong> (adresse IP, page consultée, date) : conservés
@@ -91,6 +91,11 @@ export function MentionsLegales() {
                 <strong>Les e-mails que vous m'envoyez</strong> : utilisés uniquement pour vous répondre et suivre
                 votre soutien, conservés le temps de notre échange puis au maximum 3 ans après le dernier contact. Ils
                 ne sont jamais vendus ni cédés.
+              </li>
+              <li>
+                <strong>Les dons par virement</strong> : je reçois de ma banque le nom du donateur, le montant et
+                le motif. Ces informations servent uniquement à tenir le compteur et ma comptabilité, et sont
+                conservées le temps exigé par la loi.
               </li>
               <li>
                 <strong>Le compteur des contributions</strong> : le nom d'un contributeur n'y apparaît qu'avec son
